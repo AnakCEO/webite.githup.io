@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- link bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>SMKN 1 PETIR</title>
+
+</head>
+<style>
+    body {
+        margin: 0%;
+    }
+    * {
+       padding: 0;
+       margin: 0;
+       font-family: sans-serif;
+    }
+    a {         
+       color: inherit;
+       text-decoration: none;
+    }
+    .medsos {         
+       padding: 5px 0;
+       background-color: #143d8f;
+    }
+    .medsos ul li {         
+       display: inline-block;
+       color: #fff;
+    }
+    .container {         
+       width: 80%;
+       margin: 0 auto;
+    }
+    .container:after {         
+       content: '';
+       display: block;
+       clear: both;
+    }
+    header h1 {         
+       float: left;
+       padding: 15px 0;
+       color: #143d8f;
+    }
+    header ul {         
+       float: right;
+       font-style: none;
+    }
+    header ul li {         
+        display: inline-block;
+    }
+    header ul li a {         
+        padding: 25px 20px;
+        display: inline-block;
+    }
+    header ul li a:hover {         
+        background-color: #143d8f;
+        color: #fff;
+    }
+    .active          {
+        background-color: #143d8f;
+        color: #fff;
+    }
+    .banner          {
+        height: 60vh;
+        background-image: url('img/bmw.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-attachment: fixed; */
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner:after {         
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(17, 137, 223, 0.6);
+    }
+    /* .banner h2 {         
+        color: #fff;
+        z-index: 1;
+        padding: 20px 25px;
+        border: 3px solid #fff;
+    } */
+    section {         
+        padding: 50px 0;
+    }
+    @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+            header h1 {
+                text-align: center;
+                float: none;
+            }
+            header ul {
+                text-align: center;
+                float: none;
+            }
+        }
+        .img1 {
+        width: 210px;
+        height: 220px;
+        margin-top: -20px;
+        margin-left: 20px;
+    }
+    .img2 {
+        width: 200px;
+        height: 200px;
+        margin-top: -10px;
+        margin-left: 25px;
+    }
+    .img3 {
+        width: 185px;
+        height: 185px;
+        margin-left: 30px;
+    }
+    .img4 {
+        width: 257px;
+        height: 257px;
+        margin-top: -30px;
+    }
+    .kotak1, .kotak2, .kotak3, .kotak4, .kotak5 {
+        border: 1px solid khaki;
+        width: 500px;
+        height: 400px;
+        text-align: justify;
+        padding: 30px;
+        margin-top: 30px;
+        border-radius: 20px;
+        background-color: #eee;
+        cursor: pointer;
+
+    }
+    h3 {
+        text-align: center;
+        color: #143d8f;
+        margin-bottom: 50px;
+        padding-top: 60px;
+    }
+    .unam {
+            background-color: #143d8f;
+            padding: 25px;
+            text-align: center;
+            color: #fff;
+            font-weight: 400;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    .h {
+        font-weight: normal;
+        font-size: 40px;
+        position: relative;
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 80px;
+        font-family: sans-serif;
+    }
+    .h::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background-color: crimson;
+        bottom: -10px;
+        left: 50%;
+        transform: translate(-50%);
+        animation: animate 4s linear infinite;
+    }
+    @keyframes animate {
+        0% {
+            width: 100px;
+        }
+        50% {
+            width: 200px;
+        }
+        100% {
+            width: 100px;
+        }
+    }
+    
+</style>
+<body>
+    <!--header  -->
+    <div class="medsos">
+        <div class="container">
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+        <h1>SMKN 1 PETIR</h1>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li class="active"><a href="jurusan.html">JURUSAN</a></li>
+                <li><a href="alamat.html">ALAMAT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- banner -->
+    <section class="banner"> 
+         <!-- <h2></h2> -->
+    </section>
+    <!--  -->
+
+
+    <div class="title">
+        <h3 class="h">AREAS OF EXPERTISE</h3>
+    </div>
+
+    <div class="container">
+        <div class="row align-items-start mb-3">
+            <div class="row justify-content-between">
+                <div class="col-2">
+                    <div class="kotak1">
+                        <img class="img1" src="img/dpibn.png" alt=""><img style="padding: 15px; width: 160px; margin-left: 25px;" src="img/dp.png" alt="">
+                        <p style="text-align: justify;"><strong>DPIB</strong>, singkatan dari <strong>Desain Pemodelan dan Informasi Bangunan</strong>, adalah salah satu program keahlian di bidang kejuruan yang fokus pada keterampilan dalam desain, pemodelan, dan pengelolaan informasi bangunan.</p>
+                   </div>
+                </div>
+                <div class="col-5">
+                    <div class="kotak2">
+                        <img class="img2" src="img/dkv.png" alt=""><img style="padding: 10px; width: 160px; margin-left: 25px;" src="img/dk.png" alt="">
+                        <p style="text-align: justify;"><strong>DKV</strong> adalah singkatan dari <strong>Desain Komunikasi Visual</strong>, sebuah jurusan atau program studi yang menggabungkan seni visual dengan komunikasi untuk menyampaikan pesan atau informasi secara efektif dan menarik.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-4">
+                    <div class="kotak3">
+                        <img class="img3" src="img/rpli.png" alt=""><img style="padding: 10px; width: 160px; margin-left: 25px;" src="img/rp.png" alt="">
+                        <p style="text-align: justify;"><strong>RPL</strong> adalah singkatan dari <strong>Rekayasa Perangkat Lunak</strong>, sebuah jurusan atau program studi yang fokus pada pengembangan dan pemeliharaan perangkat lunak. RPL bertujuan untuk menghasilkan perangkat lunak yang berkualitas tinggi, dapat diandalkan, dan sesuai dengan kebutuhan pengguna. </p>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="kotak4">
+                        <img class="img2" src="img/pengelasa.png" alt=""><img style="padding: 10px; width: 160px; margin-left: 25px;" src="img/tp.png" alt="">
+                        <p style="text-align: justify;"><strong>TEKNIK PENGELASAN</strong> adalah jurusan yang mempelajari membaca gambar teknik, persiapan pengelasan, pelaksanaan pengelasan, dan pemeriksaan hasil pengelasan.Jurusan Teknik Pengelasan adalah program pendidikan yang memfokuskan pada teori dan praktik pengelasan.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col align-self-start">
+                      
+                    </div>
+                    <div class="col-5 align-self-center">
+                        <div class="kotak5">
+                            <img class="img4" src="img/tab.png" alt=""><img style="padding: 10px; width: 160px;" src="img/tb.png" alt="">
+                            <p class="opet" style="text-align: justify;"><strong>TAB</strong> atau <strong>TEKNIK ALAT BERAT</strong> adalah jurusan yang mempelajari mesin-mesin berat di dalam kegiatan konstruksi dengan menerapkan ilmu fisika. Di jurusan ini, kamu akan mendalami teknik perancangan, produksi alat berat, dan cara perawatannya.</p>
+                        </div>
+                    </div>
+                    <div class="col align-self-end">
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+   <div class="unam">Copyright <i class="bi bi-c-circle"></i> 2024 | by Sinta Febrianti</div>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/style.cs">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- link bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>SMKN 1 PETIR</title>
+
+</head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        * {
+           padding: 0;
+           margin: 0;
+           font-family: sans-serif;
+        }
+        a {         
+           color: inherit;
+           text-decoration: none;
+        }
+        .medsos {         
+           padding: 5px 0;
+           background-color: #143d8f;
+        }
+        .medsos ul li {         
+           display: inline-block;
+           color: #fff;
+        }
+        .container {         
+           width: 80%;
+           margin: 0 auto;
+        }
+        .container:after {         
+           content: '';
+           display: block;
+           clear: both;
+        }
+        header h1 {         
+           float: left;
+           padding: 15px 0;
+           color: #143d8f;
+        }
+        header ul {         
+           float: right;
+           font-style: none;
+        }
+        header ul li {         
+            display: inline-block;
+        }
+        header ul li a {         
+            padding: 25px 20px;
+            display: inline-block;
+        }
+        header ul li a:hover {         
+            background-color: #143d8f;
+            color: #fff;
+        }
+        .active          {
+            background-color: #143d8f;
+            color: #fff;
+        }
+        .banner          {
+            height: 60vh;
+            background-image: url('img/bmw.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* background-attachment: fixed; */
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner:after {         
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(17, 137, 223, 0.6);
+        }
+        /* .banner h2 {         
+            color: #fff;
+            z-index: 1;
+            padding: 20px 25px;
+            border: 3px solid #fff;
+        } */
+        section {         
+            padding: 20px 0;
+        }
+        section h3 {
+            text-align: center;
+            /* padding: 30px 0; */
+            color: #143d8f;
+            margin-bottom: 40px;
+        }
+        .about p {
+            color: #666;
+            word-spacing: 2px;
+            line-height: 25px;
+        }
+        .service {
+            background-color: #f9f9f9;
+        }
+        /* .box {
+            border: 1px solid;
+            color: #143d8f;
+        } */
+        .box .col-4 {
+            width: 25px;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid;
+        }
+        .icon {
+            width: 70px;
+            height: 70px;
+            border: 1px solid;
+            border-radius: 50%;
+        }
+        .box .col-4 {
+            margin: 10px 0;
+        }
+        .visi {
+            text-align: center;
+        }
+        .visi h4 {
+            text-align: center;
+            padding: 20px 0;
+            color: #143d8f;
+            margin-bottom: 20px;
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+            header h1 {
+                text-align: center;
+                float: none;
+            }
+            header ul {
+                text-align: center;
+                float: none;
+            }
+        }
+        p {
+            font-family: 'Times New Roman', Times, serif;
+            word-spacing: 5px;
+            text-align: justify;
+            font-weight: 500;
+        }
+        .nou {
+            padding: 50px;
+        }
+        .neo {
+            margin-top: -70px;
+            padding-left: 50px;
+        }
+        .col1 {
+            width: 200px;
+            padding: 10px;
+        }
+        .col2 {
+            width: 150px;
+            padding: 15px;
+            font-size: 5px;
+        }
+        .col3 {
+            width: 200px;
+           padding: 25px;
+        }
+        .box {
+            padding-left: 100px;
+        }
+        .unam {
+            background-color: #143d8f;
+            padding: 25px;
+            text-align: center;
+            color: #fff;
+            font-weight: 400;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    .h {
+        font-weight: normal;
+        font-size: 40px;
+        position: relative;
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 80px;
+        font-family: sans-serif;
+    }
+    .h::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background-color: crimson;
+        bottom: -10px;
+        left: 50%;
+        transform: translate(-50%);
+        animation: animate 4s linear infinite;
+    }
+    @keyframes animate {
+        0% {
+            width: 100px;
+        }
+        50% {
+            width: 200px;
+        }
+        100% {
+            width: 100px;
+        }
+    }
+        
+    </style>
+<body>
+    <!--header  -->
+    <div class="medsos">
+        <div class="container">
+            <ul>
+                <li><a href=""></a></i></li>
+                <li><a href=""></a></i></li>
+                <li><a href=""></a></i></li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+        <h1>SMKN 1 PETIR</h1>
+            <ul>
+                <li class="active"><a href="index.html">HOME</a></li>
+                <li><a href="jurusan.html">JURUSAN</a></li>
+                <li><a href="alamat.html">ALAMAT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- banner -->
+    <section class="banner"> 
+         <!-- <h2>WELCOME TO WEBSITE</h2> -->
+    </section>
+    <!--  -->
+
+    <!-- about -->
+    <section class="about">
+        <div class="container">
+            <div class="row justify-content-evenly">
+                <div class="col-12 nou">
+                    <h3 class="po h">ABOUT</h3>
+                    <P>Hai sahabat studi...selamat datang di website SMKN 1 PETASIA TIMUR. Sekolah ini memfokuskan keterampilan di dalamnya. Di SMKN 1 PETASIA TIMUR terdapat jurusan yang di desain untuk melatih keterampilan siswa-siswi agar bisa langsung bekerja setelah lulus nanti.</P>
+                    <p>Kami memiliki semboyan SMK Bisa SMK Hebat Vokasi Kuat Menguatkan Indonesia, yang berarti kita bisa mewujudkan keinginan yang akan diwujudkan di masa depan. Dan hebat dalam melakukan dan mengembangkan sesuatu seperti program studi, wirausaha, mengembangkan dan membuat karya tangan sendiri.</p>
+                    <p>Mendidik para siswa-siswi dalam mengembangkan kemampuan di dalam bidang desain, elektronik maupun teknologi. Memberikan ilmu dan pengalaman dalam bidang yang diminati dan memberikan arahan untuk melakukan suatu kegiatan bermanfaat untuk para siswa-siswi. Kami memberikan fasilitas sesuai dengan jurusan masing-masing agar para siswa-siswi bisa mempraktekkan ilmu yang mereka dapatkan.</p>
+                    <p>Mengajarkan ilmu agama dan menjunjung sikap displin dan saling menghormati satu sama lain. Terutama dalam displin waktu, displin sikap, dan disiplin ilmu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="container">
+            <div class="row justify-content-evenly">
+                <div class="col-6">
+                    <img style="padding: 20px; width: 550px;" src="img/bb.jpg" alt="">
+                    <br><br>
+                    <img style="padding: 20px; width: 550px;" src="img/lb3.jpg" alt="">
+                </div>
+                <div class="col-6">
+                    <h4 align="center" style="color: #143d8f; font-size: 30px;">VISI</h4>
+                    <br>
+                    <p style="text-align: center;">Menghasilkan Tamatan Yang Unggul, Berwawasan Lingkungan, Berkarakter, dan Berdaya Saing Global.</p>
+                    <br><br>
+                    <h4 align="center" style="color: #143d8f; font-size: 30px;">MISI</h4>
+                    <br>
+                    <ul>
+                        <li><p> Memberikan pelayanan pendidikan dan kegiatan keagamaan untuk meningkatkan   ketakwaan dan akhlak mulia.</p></li>
+                        <li><p>Mendidik siswa dalam ranah keterampilan, pengetahuan dan pembinaan karakter serta pelestarian lingkungan sesuai dengan program keahliannya.</p></li>
+                        <li><p>Menyiapkan siswa yang dapat berkolaborasi di dunia kerja dan berkebhinekaan global.</p></li>
+                        <li><p>Mewujudkan siswa yang memiliki jiwa wirausaha, dapat melanjutkan pendidikan ke jenjang yang lebih tinggi dan memiliki daya saing pada tingkat global.</p></li>
+                        <li><p>Peran sekolah kejuruan sebagai pusat pengembangan keahlian,budaya hidup sehat dan berwawasan lingkungan.</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- service -->
+    <section class="service">
+        <div class="container">
+            <!-- <h3>SERVICE</h3> -->
+            <div class="box">
+                <div class="row align-items-center">
+                    <div class="col">
+                      <img class="col1" src="img/smk-removebg-preview.png" alt="">
+                    </div>
+                    <div class="col">
+                      <img class="col2" style="margin-left: 15px;" src="img/imgf2.jpg" alt="">
+                      <p style="font-size: 15px; font-weight: 900;">Kepala Sekolah SMKN 1 Petir</p>
+                      <p style="font-size: 15px; margin-top: -15px; font-weight: 900;">Alphin Lainua, S.Pd., M.Pkim</p>
+                    </div>
+                    <div class="col">
+                      <img class="col3" style="margin-top: -55px;" src="img/logo.png" alt="">
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <div class="unam">Copyright <i class="bi bi-c-circle"></i> 2024 | by Sinta Febrianti</div>
+</body>
+</html>

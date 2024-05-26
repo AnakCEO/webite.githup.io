@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+     <!-- Bootstrap CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- link bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>SMKN 1 PETIR</title>
+
+</head>
+<style>
+    * {
+       padding: 0;
+       margin: 0;
+       font-family: sans-serif;
+       text-transform: capitalize;
+       transition: all .2s cubic-bezier(.34,1.12,.68,1.31);
+       box-sizing: border-box;
+    }
+    a {         
+       color: inherit;
+       text-decoration: none;
+    }
+    .medsos {         
+       padding: 5px 0;
+       background-color: #143d8f;
+    }
+    .medsos ul li {         
+       display: inline-block;
+       color: #fff;
+    }
+    .container {         
+       width: 80%;
+       margin: 0 auto;
+    }
+    .container:after {         
+       content: '';
+       display: block;
+       clear: both;
+    }
+    header h1 {         
+       float: left;
+       padding: 15px 0;
+       color: #143d8f;
+    }
+    header ul {         
+       float: right;
+       font-style: none;
+    }
+    header ul li {         
+        display: inline-block;
+    }
+    header ul li a {         
+        padding: 25px 20px;
+        display: inline-block;
+    }
+    header ul li a:hover {         
+        background-color: #143d8f;
+        color: #fff;
+    }
+    .active          {
+        background-color: #143d8f;
+        color: #fff;
+    }
+    .banner          {
+        height: 60vh;
+        background-image: url('img/bmw.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-attachment: fixed; */
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner:after {         
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(17, 137, 223, 0.6);
+    }
+    /* .banner h2 {         
+        color: #fff;
+        z-index: 1;
+        padding: 20px 25px;
+        border: 3px solid #fff;
+    } */
+    section {         
+        padding: 50px 0;
+    }
+    .feby {         
+        margin-top: 100px;
+        margin-left: 20px;
+        border: 1px;
+    }
+    button {         
+        border-radius: 5px;
+        width: 250px;
+        height: 40px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .me {         
+        margin-left: -30px;
+        padding: 5px;
+        margin-top: -130px;
+    }
+    .mep {         
+        margin-left: 980px;
+        margin-top: -630px;
+    }
+    p {         
+        padding: 5px;
+    }
+    .pebi {         
+        width: 250px;
+        height: 250px;
+        margin-top: -250px;
+    }
+    h4 {
+        margin-left: -25px;
+    }
+    .conta {
+        position: relative;
+        min-height: 100vh;
+        background: #ddd;
+    }
+    .conta h1 {
+        font-size: 40px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: normal;
+        padding: 15px;
+        color: #143d8f;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    .conta .image-conta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        padding: 10px;
+    }
+    img {
+        width: 500px;
+        height: 500px;
+    }
+    .conta .image-conta .image {
+        height: 250px;
+        width: 350px;
+        border: 10px solid #fff;
+        box-shadow: 0 5px 15px rgba(0,0,0,.1);
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .conta .image-conta .image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: .2s linear;
+    }
+    .conta .image-conta .image:hover img {
+        transform: scale(1.1);
+    }
+    .conta .popup-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,.9);
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        display: none;
+    }
+    .conta .popup-image span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 40px;
+        font-weight: bolder;
+        color: #fff;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .conta .popup-image img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 5px solid #fff;
+        border-radius: 5px;
+        width: 750px;
+        object-fit: cover;
+    }
+    @media (max-width:768px){
+        .conta .popup-image img {
+            width: 95%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+            header h1 {
+                text-align: center;
+                float: none;
+            }
+            header ul {
+                text-align: center;
+                float: none;
+            }
+        }
+        .unam {
+            background-color: #143d8f;
+            padding: 25px;
+            text-align: center;
+            color: #fff;
+            font-weight: 400;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    .h {
+        font-weight: normal;
+        font-size: 40px;
+        position: relative;
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 80px;
+        font-family: sans-serif;
+        color: #143d8f;
+    }
+    .h::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background-color: crimson;
+        bottom: -10px;
+        left: 50%;
+        transform: translate(-50%);
+        animation: animate 4s linear infinite;
+    }
+    @keyframes animate {
+        0% {
+            width: 100px;
+        }
+        50% {
+            width: 200px;
+        }
+        100% {
+            width: 100px;
+        }
+    }
+    
+</style>
+<body>
+    <!-- header   -->
+    <div class="medsos">
+        <div class="container">
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+        <h1>SMKN 1 PETIR</h1>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="jurusan.html">JURUSAN</a></li>
+                <li><a href="alamat.html">ALAMAT</a></li>
+                <li  class="active"><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </div>
+    </header>
+
+     <!-- banner  -->
+    <section class="banner"> 
+         <!-- <h2>WELCOME TO WEBSITE</h2> -->
+    </section>
+
+    <div class="conta">
+
+        <h1 class="h">image gallery</h1>
+
+        <div class="image-conta">
+            <div class="image"><img src="img/fb1.jpg" alt=""></div>
+            <div class="image"><img src="img/fb2.jpg" alt=""></div>
+            <div class="image"><img src="img/fb3.jpg" alt=""></div>
+            <div class="image"><img src="img/fb4.jpg" alt=""></div>
+            <div class="image"><img src="img/gd1.jpg" alt=""></div>
+            <div class="image"><img src="img/gd2.jpg" alt=""></div>
+        </div>
+         
+        <br><br><br>
+        
+        <h1 class="h">school building</h1>
+
+        <div class="image-conta">
+            <div class="image"><img src="img/bmw.jpg" alt=""></div>
+            <div class="image"><img src="img/gd2.jpg" alt=""></div>
+            <div class="image"><img src="img/gd3.jpg" alt=""></div>
+        </div>
+
+        <br><br><br>
+
+        <h1 class="h">togetherness</h1>
+
+        <div class="image-conta">
+            <div class="image"><img src="img/lb1.jpg" alt=""></div>
+            <div class="image"><img src="img/lb3.jpg" alt=""></div>
+            <div class="image"><img src="img/lb4.jpg" alt=""></div>
+            <div class="image"><img src="img/bb.jpg" alt=""></div>
+            <div class="image"><img src="img/fb3.jpg" alt=""></div>
+            <div class="image"><img src="img/fb1.jpg" alt=""></div>
+        </div>
+   
+
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="img/fb1.jpg" alt="">
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.image-conta img').forEach(image =>{
+             image.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+             }
+        });
+
+        document.querySelector('.popup-image span').onclick = 
+        () => {
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
+
+    <div class="unam">Copyright <i class="bi bi-c-circle"></i> 2024 | by Sinta Febrianti</div>
+</body>
+</html>
